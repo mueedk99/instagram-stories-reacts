@@ -1,0 +1,102 @@
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  background: #222;
+  color: #fff;
+  font-family: sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 370px;
+  width: 100%;
+  padding: 8px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.story-list {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  margin-bottom: 14px;
+  padding-bottom: 6px; /* for subtle bottom space */
+  border-bottom: 1px solid #444;
+}
+
+.story-list img {
+  width: 68px;
+  height: 105px;
+  border-radius: 11px;
+  border: 2px solid #e1306c;
+  object-fit: cover;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.story-viewer-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(30, 30, 34, 0.96);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10;
+}
+
+.story-viewer {
+  width: 310px;
+  height: 430px;
+  border-radius: 13px;
+  background: #111;
+  border: 2px solid #444;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.4s ease;
+}
+
+.story-viewer img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 11px;
+  opacity: 1;
+  transition: opacity 0.7s ease;
+}
+
+.story-viewer img.loading {
+  opacity: 0.6;
+}
+
+.close-button {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  background: #e1306c;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.loading-text {
+  color: #eee;
+  position: absolute;
+}
+
+.instructions {
+  margin-top: 24px;
+  font-size: 13px;
+  color: #bbb;
+  text-align: center;
+}
